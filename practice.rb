@@ -123,20 +123,29 @@
 # p item_amounts
 
 
-# Write a method that accepts a number and returns its factorial.
-# For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
-def factorial(num)
-  product = 1;
-  while num > 0
-    product *= num;
-    num -= 1
-  end
-  product
-end
+# # Write a method that accepts a number and returns its factorial.
+# # For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+# def factorial(num)
+#   product = 1;
+#   while num > 0
+#     product *= num;
+#     num -= 1
+#   end
+#   product
+# end
 
-puts factorial(5)
+# puts factorial(5)
 
 
 
 # Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array. 
 # For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
+def print_sums(arr1, arr2)
+  arr1.each do |num1|
+    arr2.each do |num2|
+      puts num1 + num2
+    end
+  end
+end
+
+print_sums([1, 5, 10], [100, 500, 1000])

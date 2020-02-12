@@ -122,20 +122,29 @@
 // console.log(itemAmounts);
 
 
-// Write a method that accepts a number and returns its factorial.
-// For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
+// // Write a method that accepts a number and returns its factorial.
+// // For example, the factorial of 5 is 5 * 4 * 3 * 2 * 1 = 120.
 
-function factorial(num) {
-  var product = 1;
-  while (num > 0) {
-    product *= num;
-    num--;
-  }
-  return product;
-}
+// function factorial(num) {
+//   var product = 1;
+//   while (num > 0) {
+//     product *= num;
+//     num--;
+//   }
+//   return product;
+// }
 
-console.log(factorial(5));
+// console.log(factorial(5));
 
 
 // Write a method that accepts two arrays of numbers, and prints the sum of every combination of numbers from first and second array. 
 // For example, if the method receives [1, 5, 10] and [100, 500, 1000], the method should print a list: 101, 501, 1001, 105, 505, 1005, 110, 510, 1010].
+function printSums(arr1, arr2) {
+  arr1.forEach(function(num1) {
+    arr2.forEach(function(num2) {
+      console.log(num1 + num2);
+    });
+  });
+}
+
+printSums([1, 5, 10], [100, 500, 1000]);
